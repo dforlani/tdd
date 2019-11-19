@@ -16,9 +16,9 @@ public class TestDollar {
 
     @Test
     public void testMultiplication() {
-        Dollar five = new Dollar(5);
-        assertEquals(new Dollar(10), five.times(2));
-        assertEquals(new Dollar(15), five.times(3));
+        Money five = Money.dollar(5);
+        assertEquals(Money.dollar(10), five.times(2));
+        assertEquals(Money.dollar(15), five.times(3));
     }
 
     public void testEquality() {
@@ -26,4 +26,5 @@ public class TestDollar {
         assertFalse(new Dollar(5).equals(new Dollar(6)));
         assertFalse(new Franc(5).equals(new Dollar(5)));
     }
+
 }
