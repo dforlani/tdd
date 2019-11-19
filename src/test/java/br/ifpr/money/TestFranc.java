@@ -6,6 +6,8 @@
 package br.ifpr.money;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  *
@@ -19,4 +21,8 @@ public class TestFranc {
         assertEquals(new Franc(15), five.times(3));
     }
 
+    public void testEquality() {     
+        assertTrue(new Franc(5).equals(new Franc(5)));
+        assertFalse(new Franc(5).equals(new Franc(6)));
+    }
 }
