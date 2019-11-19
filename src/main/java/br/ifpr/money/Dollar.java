@@ -9,21 +9,21 @@ package br.ifpr.money;
  *
  * @author aluno
  */
-class Dollar extends Money{
+class Dollar extends Money {
 
-   
+    private String currency;
 
     Dollar(int amount) {
         this.amount = amount;
+        currency = "USD";
     }
 
-   Money times(int multiplier)  {
-      return new Dollar(amount * multiplier);
-   }	
-   
-   String currency() {
-       return "USD";
+    String currency() {
+        return currency;
     }
 
-    
+    Money times(int multiplier) {
+        return new Dollar(amount * multiplier);
+    }
+
 }
