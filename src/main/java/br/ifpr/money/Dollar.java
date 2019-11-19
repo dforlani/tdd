@@ -11,7 +11,7 @@ package br.ifpr.money;
  */
 class Dollar {
 
-    final int  amount;
+    final int amount;
 
     Dollar(int amount) {
         this.amount = amount;
@@ -20,8 +20,9 @@ class Dollar {
     Dollar times(int multiplier) {
         return new Dollar(amount * multiplier);
     }
-    
-    public boolean equals(Object o){
-        return ((Dollar)o).amount == this.amount;
+
+    public boolean equals(Object object) {
+        Dollar dollar = (Dollar) object;
+        return amount == dollar.amount;
     }
 }
