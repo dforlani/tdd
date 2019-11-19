@@ -12,8 +12,8 @@ package br.ifpr.money;
 class Money  {
    protected int amount;
    
-   public boolean equals(Object object)  {
+   public boolean equals(Object object) {
       Money money = (Money) object;
-      return amount == money.amount;
-   }   
+      return amount == money.amount && getClass().equals(money.getClass());
+   }  
 }
