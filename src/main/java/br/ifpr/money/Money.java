@@ -9,17 +9,11 @@ package br.ifpr.money;
  *
  * @author aluno
  */
-class Franc extends Money{
-
+class Money  {
+   protected int amount;
    
-
-    Franc(int amount) {
-        this.amount = amount;
-    }
-
-    Franc times(int multiplier) {
-        return new Franc(amount * multiplier);
-    }
-
-   
+   public boolean equals(Object object)  {
+      Money money = (Money) object;
+      return amount == money.amount;
+   }   
 }

@@ -9,9 +9,9 @@ package br.ifpr.money;
  *
  * @author aluno
  */
-class Dollar {
+class Dollar extends Money{
 
-    final int amount;
+   
 
     Dollar(int amount) {
         this.amount = amount;
@@ -21,8 +21,5 @@ class Dollar {
         return new Dollar(amount * multiplier);
     }
 
-    public boolean equals(Object object) {
-        Dollar dollar = (Dollar) object;
-        return amount == dollar.amount;
-    }
+    
 }
